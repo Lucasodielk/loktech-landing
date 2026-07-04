@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Materiais de marketing da LOK TECH: propostas, apresentações e peças de marca que fazem o cliente te levar a sério.">
+<title>Materiais de marketing · LOK TECH</title>
+<link rel="icon" type="image/png" href="assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black:#0D0A0C; --panel:#141013; --line:#2A2024; --line-soft:#221A1E;
+    --ink:#F1EAEC; --ink-soft:#C3B4BA; --ink-mut:#8B7A81;
+    --red:#C81421; --red-bright:#F0434F; --red-deep:#8E0E18; --red-dim:rgba(200,20,33,0.14);
+    --disp:"Space Grotesk",ui-sans-serif,system-ui,sans-serif;
+    --body:"Inter",ui-sans-serif,system-ui,sans-serif;
+    --mono:ui-monospace,"Cascadia Code","Consolas",monospace;
+    --maxw:1080px;
+  }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; background:var(--black); color:var(--ink); font-family:var(--body); line-height:1.6; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:var(--maxw); margin:0 auto; padding:0 clamp(20px,5vw,40px); }
+  a { color:inherit; text-decoration:none; }
+
+  .nav { position:sticky; top:0; z-index:20; backdrop-filter:blur(12px); background:rgba(13,10,12,0.72); border-bottom:1px solid var(--line-soft); }
+  .nav .wrap { display:flex; align-items:center; justify-content:space-between; height:68px; }
+  .nav img { width:132px; display:block; }
+  .back { font-size:14px; color:var(--ink-soft); display:inline-flex; align-items:center; gap:8px; transition:color .15s; }
+  .back:hover { color:var(--ink); }
+  .back svg { width:15px; height:15px; }
+
+  .hero { padding:clamp(56px,9vw,90px) 0 clamp(30px,5vw,50px); position:relative; }
+  .hero::before { content:""; position:absolute; inset:0; pointer-events:none;
+    background:radial-gradient(55% 60% at 50% 0%, rgba(200,20,33,0.16), transparent 70%); }
+  .hero .wrap { position:relative; }
+  .kick { font-family:var(--mono); font-size:12px; letter-spacing:2px; text-transform:uppercase; color:var(--red-bright); margin:0 0 14px; }
+  h1 { font-family:var(--disp); font-weight:700; font-size:clamp(30px,4.8vw,50px); letter-spacing:-1px; line-height:1.06; margin:0 0 14px; max-width:18ch; }
+  .sub { font-size:16.5px; color:var(--ink-soft); max-width:58ch; margin:0; }
+
+  .band { padding:clamp(36px,6vw,64px) 0 clamp(60px,9vw,90px); }
+  .grid { display:grid; grid-template-columns:repeat(2,1fr); gap:26px; align-items:start; }
+  @media (max-width:860px){ .grid { grid-template-columns:1fr; } }
+  .item { display:flex; flex-direction:column; gap:14px; }
+  .m-meta { display:flex; justify-content:space-between; align-items:baseline; }
+  .m-meta h3 { font-family:var(--disp); font-weight:600; font-size:19px; margin:0; letter-spacing:-0.3px; }
+  .m-meta span { font-family:var(--mono); font-size:11px; letter-spacing:1px; text-transform:uppercase; color:var(--ink-mut); }
+  .m-desc { font-size:14px; color:var(--ink-soft); margin:0; }
+  .frame { transition:transform .25s; }
+  .item:hover .frame { transform:translateY(-6px); }
+
+  /* Proposta (retrato) */
+  .doc {
+    aspect-ratio:3/4; border-radius:12px; overflow:hidden; border:1px solid var(--line);
+    background:linear-gradient(165deg,#150A0C,#0D0A0C); box-shadow:0 18px 44px rgba(0,0,0,0.4);
+    padding:30px; display:flex; flex-direction:column; position:relative;
+  }
+  .doc::after { content:""; position:absolute; right:-70px; top:-70px; width:230px; height:230px;
+    background:radial-gradient(circle, rgba(200,20,33,0.3), transparent 68%); }
+  .doc .d-kick { font-family:var(--mono); font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--red-bright); }
+  .doc .d-title { font-family:var(--disp); font-weight:700; font-size:26px; letter-spacing:-0.6px; line-height:1.12; margin-top:12px; }
+  .doc .d-client { margin-top:auto; padding-top:14px; border-top:1px solid var(--line); display:flex; justify-content:space-between; align-items:baseline; }
+  .doc .d-client b { font-size:12.5px; color:var(--ink-soft); font-weight:600; }
+  .doc .d-client span { font-family:var(--mono); font-size:9.5px; color:var(--ink-mut); }
+  .doc .d-rows { margin-top:22px; display:flex; flex-direction:column; gap:9px; }
+  .doc .d-rows i { display:block; height:8px; border-radius:4px; background:#221A1F; }
+  .doc .d-rows i:nth-child(1){ width:88%; } .doc .d-rows i:nth-child(2){ width:70%; } .doc .d-rows i:nth-child(3){ width:79%; background:#2A2026; }
+  .doc .d-price { margin-top:22px; display:inline-flex; align-self:flex-start; background:var(--red-dim); border:1px solid rgba(200,20,33,0.4); color:var(--red-bright); font-family:var(--mono); font-size:10.5px; letter-spacing:1px; padding:7px 13px; border-radius:999px; }
+
+  /* Slide 16:9 */
+  .deck { display:flex; flex-direction:column; gap:14px; }
+  .slide169 {
+    aspect-ratio:16/9; border-radius:12px; overflow:hidden; border:1px solid var(--line);
+    background:linear-gradient(160deg,#150A0C,#0D0A0C); box-shadow:0 18px 44px rgba(0,0,0,0.4);
+    padding:24px 26px; display:flex; flex-direction:column; justify-content:center; gap:10px; position:relative;
+  }
+  .slide169 .s-kick { font-family:var(--mono); font-size:9.5px; letter-spacing:2px; text-transform:uppercase; color:var(--red-bright); }
+  .slide169 .s-title { font-family:var(--disp); font-weight:700; font-size:22px; letter-spacing:-0.5px; line-height:1.1; }
+  .slide169 .s-bars { display:flex; gap:10px; margin-top:10px; align-items:flex-end; height:52px; }
+  .slide169 .s-bars i { flex:1; border-radius:5px 5px 0 0; background:#221A1F; }
+  .slide169 .s-bars i:nth-child(1){ height:36%; } .slide169 .s-bars i:nth-child(2){ height:58%; }
+  .slide169 .s-bars i:nth-child(3){ height:78%; background:var(--red-deep); } .slide169 .s-bars i:nth-child(4){ height:100%; background:var(--red); }
+  .slide169.cover { align-items:center; text-align:center; }
+  .slide169.cover .s-logo { width:120px; }
+  .slide169.cover .s-title { font-size:19px; max-width:22ch; }
+
+  /* Cartão de visita */
+  .cards2 { display:flex; flex-direction:column; gap:16px; }
+  .biz {
+    aspect-ratio:17/10; border-radius:12px; border:1px solid var(--line); overflow:hidden;
+    box-shadow:0 18px 44px rgba(0,0,0,0.4); padding:22px 24px; display:flex; flex-direction:column; position:relative;
+  }
+  .biz.front { background:linear-gradient(155deg,#170E10,#0D0A0C); justify-content:space-between; }
+  .biz.front img { width:130px; }
+  .biz.front .b-info { display:flex; justify-content:space-between; align-items:flex-end; }
+  .biz.front .b-info div { display:flex; flex-direction:column; gap:2px; }
+  .biz.front .b-name { font-family:var(--disp); font-weight:600; font-size:14px; }
+  .biz.front .b-role { font-family:var(--mono); font-size:9px; letter-spacing:1.5px; text-transform:uppercase; color:var(--ink-mut); }
+  .biz.front .b-mail { font-size:10.5px; color:var(--ink-soft); text-align:right; }
+  .biz.back { background:var(--red); align-items:center; justify-content:center; }
+  .biz.back .b-mono { font-family:var(--disp); font-weight:700; font-size:34px; color:#FDEFF0; letter-spacing:2px; }
+
+  .note { margin-top:34px; padding:18px 22px; border:1px dashed var(--line); border-radius:12px; font-size:13.5px; color:var(--ink-mut); }
+  .note b { color:var(--ink-soft); }
+
+  .cta { text-align:center; padding:clamp(50px,8vw,80px) 0; border-top:1px solid var(--line-soft);
+    background:radial-gradient(70% 95% at 50% 0%, rgba(200,20,33,0.24), transparent 62%); }
+  .cta h2 { font-family:var(--disp); font-weight:700; font-size:clamp(24px,3.8vw,36px); letter-spacing:-0.8px; margin:0 0 12px; }
+  .cta p { color:var(--ink-soft); margin:0 0 26px; font-size:15.5px; }
+  .btn { display:inline-flex; align-items:center; gap:9px; font-weight:600; font-size:15px; padding:14px 26px; border-radius:10px;
+    background:var(--red); color:#FDEFF0; box-shadow:0 10px 26px rgba(200,20,33,0.32); transition:transform .15s, filter .15s; }
+  .btn:hover { transform:translateY(-2px); filter:brightness(1.07); }
+
+  footer { padding:32px 0 40px; border-top:1px solid var(--line-soft); text-align:center; }
+  footer .fine { font-family:var(--mono); font-size:11.5px; color:var(--ink-mut); letter-spacing:0.3px; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal { opacity:0; transform:translateY(30px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+    .reveal.in { opacity:1; transform:none; }
+    .reveal.d1 { transition-delay:.1s; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="index.html" aria-label="LOK TECH"><img src="assets/logo.png" alt="LOK TECH"></a>
+    <a href="index.html#servicos" class="back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H5M11 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg> Voltar</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="kick">materiais de marketing</p>
+    <h1>Material que fecha negócio.</h1>
+    <p class="sub">Proposta bonita passa confiança antes da primeira reunião. Aqui vão exemplos do que a LOK TECH monta pra sua marca: proposta comercial, apresentação e peças de identidade.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="grid">
+
+      <div class="item reveal">
+        <div class="frame doc">
+          <span class="d-kick">Proposta comercial</span>
+          <div class="d-title">Identidade visual + site pro seu negócio</div>
+          <div class="d-rows"><i></i><i></i><i></i></div>
+          <span class="d-price">investimento claro, sem surpresa</span>
+          <div class="d-client"><b>Preparado para: Seu Negócio</b><span>LOK TECH · 2026</span></div>
+        </div>
+        <div class="m-meta"><h3>Proposta comercial</h3><span>exemplo 01</span></div>
+        <p class="m-desc">Escopo, prazo e preço organizados num documento com a sua marca. O cliente entende tudo e decide rápido.</p>
+      </div>
+
+      <div class="item reveal d1">
+        <div class="frame deck">
+          <div class="slide169 cover">
+            <img class="s-logo" src="assets/logo.png" alt="LOK TECH">
+            <div class="s-title">Apresentação institucional da sua marca</div>
+          </div>
+          <div class="slide169">
+            <span class="s-kick">Resultados</span>
+            <div class="s-title">Crescimento que dá pra mostrar</div>
+            <div class="s-bars"><i></i><i></i><i></i><i></i></div>
+          </div>
+        </div>
+        <div class="m-meta"><h3>Apresentação</h3><span>exemplo 02</span></div>
+        <p class="m-desc">Slides institucionais ou de vendas com a cara da sua empresa. Pra reunião, pitch ou envio por WhatsApp.</p>
+      </div>
+
+      <div class="item reveal">
+        <div class="frame cards2">
+          <div class="biz front">
+            <img src="assets/logo.png" alt="LOK TECH">
+            <div class="b-info">
+              <div><span class="b-name">Seu Nome</span><span class="b-role">Sua função</span></div>
+              <span class="b-mail">contato@suamarca.com<br>@suamarca</span>
+            </div>
+          </div>
+          <div class="biz back"><span class="b-mono">LK</span></div>
+        </div>
+        <div class="m-meta"><h3>Peças de identidade</h3><span>exemplo 03</span></div>
+        <p class="m-desc">Cartão de visita, assinatura de email, capa de WhatsApp Business. As pontas soltas que completam a marca.</p>
+      </div>
+
+      <div class="item reveal d1">
+        <div class="frame doc" style="justify-content:center; gap:18px; text-align:center; align-items:center;">
+          <span class="d-kick">sob demanda</span>
+          <div class="d-title" style="font-size:22px; max-width:16ch;">Precisa de outra peça? A gente monta.</div>
+          <p style="font-size:12.5px; color:var(--ink-mut); max-width:30ch; margin:0;">Cardápio, catálogo, banner, convite, mídia pra evento. Se é visual e representa sua marca, tá no escopo.</p>
+        </div>
+        <div class="m-meta"><h3>Outros formatos</h3><span>sob demanda</span></div>
+        <p class="m-desc">O material acompanha a necessidade do seu momento. É só falar o que precisa.</p>
+      </div>
+
+    </div>
+
+    <p class="note"><b>Exemplos ilustrativos:</b> os modelos acima mostram o estilo e o nível de acabamento. Cada material é montado do zero com a identidade do seu negócio.</p>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Sua marca merece material à altura.</h2>
+    <p>Conta o que você precisa apresentar e a gente monta a peça certa.</p>
+    <a class="btn" href="mailto:loktech.contato@gmail.com">Pedir meu material</a>
+  </div>
+</section>
+
+<footer><span class="fine">LOK TECH · materiais de marketing · 2026</span></footer>
+
+<script>
+  (function () {
+    if (!('IntersectionObserver' in window)) { document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')}); return; }
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  })();
+</script>
+</body>
+</html>
